@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Roy Laboratory</title>
+  <meta name="description" content="Roy Laboratory - Research in Bioengineering and Computational Biology" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <a href="https://www.uthsc.edu/" target="_blank" rel="noopener noreferrer">
+          <img src="/Pictures/uthsc-primary-centered-logo-4c.png" alt="UTHSC logo" />
+        </a>
+        <span class="brand-text">
+          <span class="brand-line">The Roy</span>
+          <span class="brand-line">Laboratory</span>
+        </span>
+      </div>
+      <nav class="nav nav--broad">
+        <a class="nav-item" href="#home" data-panel="about">About us</a>
+        <button class="nav-item" data-panel="research">Research</button>
+        <button class="nav-item" data-panel="centers">Centers</button>
+        <button class="nav-item" data-panel="education">Education</button>
+        <button class="nav-item" data-panel="news">News</button>
+      </nav>
+      <button class="hamburger" aria-label="Open Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mega" id="mega">
+      <div class="container mega-inner">
+        <div class="mega-col" id="panel-research">
+          <h3><a href="#impact" class="mega-link">Our impact</a></h3>
+          <p>Discover the impact of our research on human health.</p>
+        </div>
+        <div class="mega-col" id="panel-centers">
+          <h3>People</h3>
+          <p>Meet our members, fellows, leadership, and collaborators.</p>
+        </div>
+        <div class="mega-col" id="panel-education">
+          <h3>Join</h3>
+          <p>Find out how to join the lab as a student or associate.</p>
+        </div>
+        <div class="mega-col" id="panel-news">
+          <h3>Latest</h3>
+          <p>See announcements and media coverage.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Roy Laboratory</strong>
+        <p>Advancing bioengineering and computational biology.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#contact">Contact</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Roy Laboratory. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/src/app.js" type="module"></script>
+</body>
+</html>
