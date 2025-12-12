@@ -20,7 +20,7 @@ window.addEventListener('hashchange', navigate);
 window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('year').textContent = new Date().getFullYear();
   setupMenu();
-  setupMegaMenu();
+  setupMegaMenu(); // now a no-op
   navigate();
 });
 
@@ -34,33 +34,8 @@ function setupMenu() {
 }
 
 function setupMegaMenu() {
-  const mega = document.getElementById('mega');
-  const items = document.querySelectorAll('.nav.nav--broad .nav-item');
-  const panels = {
-    about: document.getElementById('panel-about'),
-    research: document.getElementById('panel-research'),
-    centers: document.getElementById('panel-centers'),
-    education: document.getElementById('panel-education'),
-    news: document.getElementById('panel-news'),
-  };
-  items.forEach(btn => {
-    const key = btn.getAttribute('data-panel');
-    const open = () => {
-      mega.classList.add('open');
-      Object.values(panels).forEach(el => el.style.display = 'none');
-      panels[key].style.display = 'block';
-    };
-    btn.addEventListener('mouseenter', open);
-    btn.addEventListener('click', open);
-  });
-  mega.addEventListener('mouseleave', () => mega.classList.remove('open'));
-  // Close mega when a link inside is clicked (navigate away)
-  mega.addEventListener('click', (e) => {
-    const target = e.target.closest('a[href^="#"]');
-    if (target) {
-      mega.classList.remove('open');
-    }
-  });
+  // Disable mega menu collapsible behavior
+  return;
 }
 
 function mount(html) {
