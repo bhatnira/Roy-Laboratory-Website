@@ -135,6 +135,173 @@ We are also interested in developing technologies around fluorine-containing com
   `;
 }
 
+function renderMembers(root) {
+  root.innerHTML = `
+    <section class="centered-page">
+      <div class="container">
+        <h2 style="margin-top: 48px; text-align: left;">Current</h2>
+        <div class="grid" style="grid-template-columns: repeat(3, minmax(320px, 400px)); gap: 24px; margin-top: 24px; justify-content: center;">
+          <div class="card people-card" style="grid-column: 2;">
+            <div class="avatar"></div>
+            <div>
+              <h3>Sudeshna Roy</h3>
+              <p class="role">Chief Executive</p>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 24px; margin-top: 24px;">
+          <div class="card people-card" style="width: 400px; max-width: 400px;">
+            <div class="avatar"></div>
+            <div>
+              <h3>Mohammed Khalifa</h3>
+              <p class="role">Post Doctoral Scientist</p>
+            </div>
+          </div>
+          <div class="card people-card" style="width: 400px; max-width: 400px;">
+            <div class="avatar"></div>
+            <div>
+              <h3>Nirajan Bhattarai</h3>
+              <p class="role">Post Doctoral Researcher</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(4, minmax(280px, 400px)); gap: 24px; margin-top: 24px; justify-content: center;">
+          <div class="card people-card">
+            <div class="avatar"></div>
+            <div>
+              <h3>Ahmed Elsawi</h3>
+              <p class="role">2nd Year PhD student</p>
+            </div>
+          </div>
+          <div class="card people-card">
+            <div class="avatar"></div>
+            <div>
+              <h3>Mohamed Mahmoud Hefina</h3>
+              <p class="role">2nd year PhD student</p>
+            </div>
+          </div>
+          <div class="card people-card">
+            <div class="avatar"></div>
+            <div>
+              <h3>Destinee Manning</h3>
+              <p class="role">3rd year PhD student</p>
+            </div>
+          </div>
+          <div class="card people-card">
+            <div class="avatar"></div>
+            <div>
+              <h3>Tzu-Yu Huang</h3>
+              <p class="role">3rd year PhD student</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid" style="grid-template-columns: repeat(4, minmax(280px, 400px)); gap: 24px; margin-top: 24px; justify-content: center;">
+          <div class="card people-card">
+            <div class="avatar"></div>
+            <div>
+              <h3>Alixandria Skye Kirkendol</h3>
+              <p class="role">PharmD/PhD Student</p>
+            </div>
+          </div>
+          <div class="card people-card">
+            <div class="avatar"></div>
+            <div>
+              <h3>DaJ'ai Ashford</h3>
+              <p class="role">2nd year PhD Student</p>
+            </div>
+          </div>
+          <div class="card people-card">
+            <div class="avatar"></div>
+            <div>
+              <h3>Ghada Abada</h3>
+              <p class="role">4th Year PhD Student</p>
+            </div>
+          </div>
+          <div class="card people-card">
+            <div class="avatar"></div>
+            <div>
+              <h3>David Park</h3>
+              <p class="role">Research Assistant</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 style="margin-top: 64px; text-align: left;">Alumni</h2>
+        <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 24px;">
+          <div class="card alumni-card">
+            <h3>Mario Djugovski</h3>
+            <p class="role">4th year PhD student</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Sampad Jana</h3>
+            <p class="role">Postdoc; Next Position: Scientist, Sygnature Discovery</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Shamba Chatterjee</h3>
+            <p class="role">Postdoc; Next Position: NCNPR at UMSOP</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Sweta Adhikari</h3>
+            <p class="role">M.S. Pharmaceutical Sciences, 2019; Next Position: Research Chemist, Obiter Research</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Tomayo Berida</h3>
+            <p class="role">Ph.D. in Pharmaceutical Sciences 2023; Next Position: Postdoc at Vanderbilt with Prof. Craig Lindsey</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Hamdan Alrefaei</h3>
+            <p class="role">M.S. Pharmaceutical Sciences</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Emmanuel Ross Hodges</h3>
+            <p class="role">Undergraduate Researcher</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>J.D. Olivet</h3>
+            <p class="role">Undergraduate Researcher</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Galina Ostrovsky</h3>
+            <p class="role">Undergraduate Researcher</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Matt Saucier</h3>
+            <p class="role">B.A. Biochemistry, 2020; Next Position: Graduate student, Delcamp lab</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Peggy McCluggage</h3>
+            <p class="role">B.A. Biochemistry, 2020; Next Position: NIH Postbaccalaureate</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Lindsey Hohlt</h3>
+            <p class="role">Undergraduate Researcher</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Micah Stewart</h3>
+            <p class="role">Undergraduate Researcher</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Vu Bui</h3>
+            <p class="role">Undergraduate Researcher</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Lily Nguyen</h3>
+            <p class="role">Undergraduate Researcher</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Hannah Chasteen</h3>
+            <p class="role">Undergraduate Researcher</p>
+          </div>
+          <div class="card alumni-card">
+            <h3>Tam Nguyen</h3>
+            <p class="role">Undergraduate IT Assistant</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
 function renderPeople() {
   mount(`
   <section class="section">
@@ -417,6 +584,9 @@ function router() {
       break;
     case 'research':
       renderResearch(root);
+      break;
+    case 'members':
+      renderMembers(root);
       break;
     case 'people':
       renderPeople();
