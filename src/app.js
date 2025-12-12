@@ -78,7 +78,7 @@ function renderHome() {
           <div class="swiper-slide"><img src="/public/assets/images/IMG_3773.jpg" alt="Roy Lab photo 1" /></div>
           <div class="swiper-slide"><img src="/public/assets/images/IMG_3785.jpg" alt="Roy Lab photo 2" /></div>
           <div class="swiper-slide"><img src="/public/assets/images/IMG_3815.jpg" alt="Roy Lab photo 3" /></div>
-          <div class="swiper-slide"><img src="/public/assets/images/IMG_3851.jpg" alt="Roy Lab photo 4" /></div>
+          <div class="swiper-slide"><img src="/public/assets/images/IMG_3815.jpg" alt="Roy Lab photo 4" /></div>
         </div>
         <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
