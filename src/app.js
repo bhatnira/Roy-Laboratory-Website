@@ -403,27 +403,343 @@ function renderPeople() {
 }
 
 function renderPublications() {
-  mount(`
-  <section class="section">
-    <div class="container">
-      <h2>Publications</h2>
-      <p class="sub">Selected publications from the lab.</p>
-      <div class="grid">
-        ${publications().map(p => `
+  const root = document.getElementById('app');
+  root.innerHTML = `
+    <section class="centered-page">
+      <div class="container">
+        <h1 style="margin-top: 48px; text-align: left;">Publications</h1>
+        <div style="margin-top: 32px; max-width: 100%;">
+          
           <div class="pub-item">
             <div>
-              <h3>${p.title}</h3>
-              <p class="meta">${p.authors} — ${p.venue} (${p.year})</p>
+              <h3><strong>1.</strong> Synthetic Strategies to Access Fluorinated Azoles</h3>
+              <p class="meta">Abd El-Gaber, M. K.; Djugovski, M.; Huang, T.-Y.; Adhikari, S.; Roy, S. — European Journal of Organic Chemistry (2025)</p>
             </div>
             <div class="links">
-              ${p.doi ? `<a href="${p.doi}" target="_blank" rel="noopener">DOI</a>` : ''}
-              ${p.pdf ? `<a href="${p.pdf}" target="_blank" rel="noopener">PDF</a>` : ''}
+              <a href="https://doi.org/10.1002/ejoc.202500508" target="_blank" rel="noopener">DOI</a>
             </div>
           </div>
-        `).join('')}
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>2.</strong> 1,2,4-Triazole-based first-in-class non-nucleoside inhibitors of bacterial enzyme MraY</h3>
+              <p class="meta">Berida, T.; Huang, T.-Y.; Weck, S.; Lutz, M.; McKee, S.; Kagerah, N.; Manning, D.; Jahan, M.; Mishra, S.; Hermann, J.; Muller, R.; Doerksen, R.; Stallings, C.; Christian Ducho, C.; Roy, S. — ACS Bio & Med Chem Au (2025)</p>
+              <p class="meta" style="font-size: 13px; margin-top: 8px; font-style: italic;">Non-peer-reviewed preprint: bioRxiv 2025</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1021/acsbiomedchemau.5c00158" target="_blank" rel="noopener">DOI</a>
+              <a href="https://doi.org/10.1101/2025.01.30.635793" target="_blank" rel="noopener">Preprint</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>3.</strong> HuR inhibition reduces post-ischemic cardiac remodeling by dampening myocyte-dependent inflammatory gene expression and the innate immune response</h3>
+              <p class="meta">Slone, S.; Anthony, S. R.; Green, L. C.; Parkins, S.; Acharya, P.; Kasprovic, D. A.; Reynolds, K.; Jaggers, R. M.; Nieman, M. L.; Alam, P.; Wu, X.; Roy, S.; Aubé, J.; Xu, L.; Li, Z.; Lorenz, J. N.; Owens, A. P.; Kanisicak, O.; Tranter, M. — The FASEB Journal (2025)</p>
+              <p class="meta" style="font-size: 13px; margin-top: 8px; font-style: italic;">Non-peer-reviewed preprint: bioRxiv 2023</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1096/fj.202400532RRR" target="_blank" rel="noopener">DOI</a>
+              <a href="https://doi.org/10.1101/2023.01.17.524420" target="_blank" rel="noopener">Preprint</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>4.</strong> Plant Antibacterials: The Challenges and Opportunities</h3>
+              <p class="meta">Berida, T.; Adekunle, Y. A.; Dada-Adegbola, H.; Kdimy, A.; Roy, S.; Sarkar, S. D. — Heliyon (2024)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1016/j.heliyon.2024.e31145" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>5.</strong> Morpholine-mediated defluorinative cycloaddition of gem-difluoroalkenes and organic azides</h3>
+              <p class="meta">Huang, T.-Y.; Djugovski, M.; Manning, D. L.; Adhikari, S.; Roy, S. — Beilstein Journal of Organic Chemistry (2023)</p>
+              <p class="meta" style="font-size: 13px; margin-top: 8px; font-style: italic;">Non-peer-reviewed preprint: ChemRxiv, 2023</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.3762/bjoc.19.111" target="_blank" rel="noopener">DOI</a>
+              <a href="https://doi.org/10.26434/chemrxiv-2023-w2r84" target="_blank" rel="noopener">Preprint</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>6.</strong> Discovery, Synthesis, and Optimization of 1,2,4-Triazolyl Pyridines Targeting Mycobacterium tuberculosis</h3>
+              <p class="meta">Berida, T.; McKee, S. R.; Chatterjee, S.; Li, W.; Pandey, P.; Tripathi, S. D.; Doerksen, R. D.; Jackson, M.; Ducho, C.; Stallings, C. L.; Roy, S. — ACS Infectious Diseases (2023)</p>
+              <p class="meta" style="font-size: 13px; margin-top: 8px; font-style: italic;">Non-peer-reviewed preprint: bioRxiv, 2023</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1021/acsinfecdis.3c00341" target="_blank" rel="noopener">DOI</a>
+              <a href="https://doi.org/10.1101/2022.11.14.516356" target="_blank" rel="noopener">Preprint</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>7.</strong> The challenges and opportunities of developing small molecule inhibitors of MraY</h3>
+              <p class="meta">Manning, D. L.; Huang, T.-Y.; Roy, S. — Annual Reports in Medicinal Chemistry (2023)</p>
+              <p class="meta" style="font-size: 13px; margin-top: 8px; font-style: italic;">Invited Review</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1016/bs.armc.2023.09.005" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>8.</strong> Small molecules targeting the RNA-binding protein HuR inhibit tumor growth in xenografts</h3>
+              <p class="meta">Wu, X.; Ramesh, R.; Wang, J.; Zheng, Y.-G.; Armaly, A.; Wei, L.; Xing, M.; Roy, S.; Lan, L.; Gao, P.; Miao, Y.; Xu, L.; Aubé, J. — Journal of Medicinal Chemistry (2023)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1021/acs.jmedchem.2c01723" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>9.</strong> HuR-dependent expression of Wisp1 is necessary for TGF-induced cardiac myofibroblast activity</h3>
+              <p class="meta">Green, L. C; Slone, S.; Anthony, S. R.; Guarnieri, A. Parkins, S.; Shearer, S. M.; Neiman, M. L.; Roy, S.; Aubé, J.; Wu, X.; Xu, L., Tranter, M. — Journal of Molecular and Cellular Cardiology (2023)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1016/j.yjmcc.2022.10.007" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>10.</strong> Identification of Potential Non-nucleoside MraY Inhibitors for Tuberculosis Chemotherapy from Structure-Based Virtual Screening</h3>
+              <p class="meta">Pandey, P.; Chatterjee, S.; Berida, T.; Doerksen, R. J.; Roy, S. — Journal of Biomolecular Structure & Dynamics (2022)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1080/07391102.2020.1862705" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>11.</strong> Optimization Rules for SARS-CoV-2 Mpro Antivirals: Ensemble Docking and Exploration of the Coronavirus Protease Active Site</h3>
+              <p class="meta">Stoddard, S. V.; Stoddard, S. D; Oelkers, B. K.; Fitts, K.; Whalum, K.; Hemphill, A. D.; Manikonda, J.; Martinez, L. M.; Riley, E. G.; Roof, C. M.; Sarwar, N.; Thomas, D. M.; Ulmer, E.; Wallace, F. E.; Pandey, P.; Roy, S. — Viruses (2020)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.3390/v12090942" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>12.</strong> Targeting the interaction between RNA-binding protein HuR and FOXQ1 suppresses breast cancer invasion and metastasis</h3>
+              <p class="meta">Wu, X.; Gardashova, G.; Lan, L.; Han, S.; Zhong, C.; Marquez, R.; Wei, L.; Wood, S.; Roy, S.; Gowthaman, R.; Karanicolas, J.; Gao, P.; Dixon, D.; Welch, D.; Li, L.; Ji, M.; Aubé, J.; Xu, L. — Communications Biology (2020)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1038/s42003-020-0933-1" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>13.</strong> Regioselective synthesis of 4-fluoro-1,5-disubstituted-1,2,3-triazoles from synthetic surrogates of α-fluoroalkynes</h3>
+              <p class="meta">Jana, S.; Adhikari, S.; Cox, M. R.; Roy, S. — Chemical Communications (2020)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1039/C9CC09216A" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>14.</strong> HuR Reduces Radiation-Induced DNA Damage by Enhancing Expression of ARID1A</h3>
+              <p class="meta">Andrade, D.; Mehta, M.; Griffith, J.; Oh, S.; Corbin, J.; Babu, A.; De, S.; Chen, A.; Zhao, Y. D.; Husain, S.; Roy, S.; Xu, L.; Aube, J.; Janknecht, R.; Gorospe, M.; Herman, T.; Ramesh, R.; Munshi, A. — Cancers (2019)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.3390/cancers11122014" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>15.</strong> The HuR CMLD-2 Inhibitor Exhibits Antitumor Effects via MAD2 Downregulation in Thyroid Cancer Cells</h3>
+              <p class="meta">Allegri, L.; Baldan, F.; Roy, S.; Aubé, J.; Russo, D.; Filetti, S.; Damante, G. — Scientific Reports (2019)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1038/s41598-019-43894-0" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>16.</strong> Human Antigen R as a Therapeutic Target in Pathological Cardiac Hypertrophy</h3>
+              <p class="meta">Green, L.G.; Anthony, S. R.; Slone, S.; Lanzillotta, L.; Nieman, M. L.; Wu, X.; Robbins, N.; Jones, S. M.; Roy, S.; Owens, A. P.; Aubé, J.; Xu, L.; Lorenz, J. N.; Blaxall, B. C.; Rubinstein, J.; Benoit, J. B.; Tranter, M. — JCI Insight (2019)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1172/jci.insight.121541" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>17.</strong> Identification of Antimalarial Inhibitors Using Late-Stage Gametocytes in a Phenotypic Live/Dead Assay</h3>
+              <p class="meta">Spicer, T. P.; Gardiner, D. L.; Schoenen, F. J.; Roy, S.; Griffin, P. R.; Chase, P.; Scampavia, L.; Hodder, P.; Trenholme, K. R. — SLAS DISCOVERY: Advancing Life Sciences R&D (2019)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1177/2472555218796410" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>18.</strong> Hexafluoroisopropanol and Acetyl Chloride Promoted Catalytic Hydroarylation with Phenols</h3>
+              <p class="meta">Roy, S.; Motiwala, H. M.; Koshlap, K. M.; Aubé, J. — European Journal of Organic Chemistry (2018)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1002/ejoc.201701256" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>19.</strong> HuR-targeted small molecule inhibitor exhibits cytotoxicity towards human lung cancer cells</h3>
+              <p class="meta">Muralidharan, R.; Mehta, M.; Ahmed, R.; Roy, S.; Xu, L.; Aubé, J.; Chen, A.; Zhao, Y.; Herman, T.; Ramesh, R.*; Munshi, A. — Scientific Reports (2017)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1038/s41598-017-07787-4" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>20.</strong> N-Phenylbenzamides as Potent Inhibitors of the Mitochondrial Permeability Transition Pore</h3>
+              <p class="meta">Roy, S.*; Sileikyte, J.; Neuenswander, B.; Hedrick, M. P.; Chung, T. D. Y.; Aubé, J.; Schoenen, F. J.*; Forte M. A.*; Bernardi, P. — ChemMedChem (2016)</p>
+              <p class="meta" style="font-size: 13px; margin-top: 8px; font-style: italic;">*co-corresponding author</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1002/cmdc.201500545" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>21.</strong> Discovery, Synthesis, and Optimization of Diarylisoxazole-3-carboxamides as Potent Inhibitors of the Mitochondrial Permeability Transition Pore</h3>
+              <p class="meta">Roy, S.; Sileikyte, J.; Schiavone, M.; Neuenswander, B.; Argenton, F.; Aubé, J.; Hedrick, M. P.; Chung, T. D. Y.; Forte M. A.; Bernardi, P.; Schoenen, F. J. — ChemMedChem (2015)</p>
+              <p class="meta" style="font-size: 13px; margin-top: 8px; font-style: italic;">Designated as Very Important Paper (VIP)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1002/cmdc.201500284" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>22.</strong> A Practical and Scalable Synthesis of (S)- and (R)-1-(Dimethoxyphosphoryl)allyl Methyl Carbonates</h3>
+              <p class="meta">Roy, S.; Sutivisedsak, N.; Hamper, B. C.; Lyss, A. M.; Spilling, C. D. — Synthesis (2015)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1055/s-0035-1560487" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>23.</strong> Development of (E)-2-((1,4-dimethylpiperazin-2-ylidene)amino)-5-nitro-N-phenylbenzamide, ML336: Novel 2 Amidinophenylbenzamides as Potent Inhibitors of Venezuelan Equine Encephalitis Virus</h3>
+              <p class="meta">Schroeder, C. E.; Yao, Y.; Sotsky, J.; Smith, R. A.; Roy, S.; Chu, Y-K, Guo, H.; Tower, N. A.; Noah, J. W.; McKellip, S.; Sosa, M.; Ramussen, L.; Smith, L. H.; White. E. L.; Aubé, J.; Jonsson, C. B.; Chung, D.; Golden, J. E. — Journal of Medicinal Chemistry (2014)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1021/jm501203v" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>24.</strong> Small Molecules Targeting the Mitochondrial Permeability Transition</h3>
+              <p class="meta">Sileikyte, J.; Roy, S.; Porubsky, P.; Neuenswander, B.; Wang, J.; Hedrick, M.; Pinkerton, A. B.; Salaniwal, S.; Kung, P.; Mangravita-Novo, A.; Smith, L. H.; Bourdette, D. N.; Jackson, M. R.; Aubé, J; Chung, T. D. Y.; Schoenen, F. J.; Forte M. A.; Bernardi, P. — Probe Reports from the NIH Molecular Libraries Program (2014)</p>
+            </div>
+            <div class="links">
+              <a href="http://www.ncbi.nlm.nih.gov/books/NBK280049/" target="_blank" rel="noopener">Link</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>25.</strong> ML336: Development of Quinazolinone-Based Inhibitors Against Venezuelan Equine Encephalitis Virus (VEEV)</h3>
+              <p class="meta">Chung, D.; Schroeder, C. E.; Sotsky, J.; Yao, T.; Roy, S.; Smith, R. A.; Tower, N. A.; Noah, J. A.; McKellip, S.; Sosa, M.; Rasmussen, L.; White, E. L.; Aubé, J.; Golden, J. E. — Probe Reports from the NIH Molecular Libraries Program (2013)</p>
+            </div>
+            <div class="links">
+              <a href="http://www.ncbi.nlm.nih.gov/books/NBK179829/" target="_blank" rel="noopener">Link</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>26.</strong> An Expeditious Total Synthesis of Both Diastereomeric Lipid Dihydroxytetrahydrofurans from Notheia Anomala</h3>
+              <p class="meta">Roy, S.; Spilling, C. D.* — Organic Letters (2012)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1021/ol300597u" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>27.</strong> Synthesis of the C(18)-C(34) Fragment of Amphidinolide C and the C(18)-C(29) Fragment of Amphidinolide F</h3>
+              <p class="meta">Roy, S.; Spilling, C. D. — Organic Letters (2010)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1021/ol102345v" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+          <div class="pub-item">
+            <div>
+              <h3><strong>28.</strong> A Task Specific Basic Ionic Liquid, [BmIm]OH-promoted Efficient green and One-pot Synthesis of Tetrahydrobenzo[b]pyran Derivatives</h3>
+              <p class="meta">Ranu, B. C.; Banerjee, S.; Roy, S. — Indian Journal of Chemistry (2008)</p>
+            </div>
+            <div class="links">
+              <a href="https://doi.org/10.1002/chin.200846133" target="_blank" rel="noopener">DOI</a>
+            </div>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  `;
+}
+
+function renderSudeshnaRoy() {
+  mount(`
+    <section class="section impact-page">
+      <div class="container">
+        <h2>Sudeshna Roy, Ph.D.</h2>
+        <div class="grid impact-grid">
+          <div>
+            <div class="card impact-copy" style="margin-top: 75px;">
+              <p style="font-size: 18px; font-weight: 600; margin-bottom: 4px;">Associate Professor</p>
+              <p style="margin-bottom: 4px;">College of Pharmacy</p>
+              <p style="margin-bottom: 24px;">Department of Pharmaceutical Sciences</p>
+              
+              <p style="margin-bottom: 4px;">881 Madison Avenue</p>
+              <p style="margin-bottom: 4px;">Pharmacy Building_05_571</p>
+              <p style="margin-bottom: 4px;">Memphis, TN 38163</p>
+              <p><a href="mailto:roy@uthsc.edu" style="color: var(--primary);">roy@uthsc.edu</a></p>
+            </div>
+          </div>
+          <div>
+            <div style="width: 400px; height: 400px; margin: 0 auto;">
+              <img src="assets/images/IMG_4759.jpg" alt="Sudeshna Roy" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover; border: 3px solid white; box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);">
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin-top: 200px;">
+          <h3 style="margin-bottom: 24px; font-size: 24px;">Curriculum Vitae</h3>
+          <div style="width: 100%; height: 800px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden;">
+            <iframe src="assets/Roy-CV-updated-Oct2025/Sudeshna Roy CV_Oct 2025.pdf" style="width: 100%; height: 100%; border: none;" title="Sudeshna Roy CV"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
   `);
 }
 
@@ -603,6 +919,9 @@ function router() {
       break;
     case 'publications':
       renderPublications();
+      break;
+    case 'sudeshna-roy':
+      renderSudeshnaRoy();
       break;
     case 'news':
       renderNews();
