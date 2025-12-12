@@ -114,6 +114,10 @@ function renderResearch(root) {
 The Roy Laboratory is focused on developing new technologies at the interface of chemistry and biology. To this end, we explore and develop new methods to synthesize small molecules and apply them in various drug discovery and chemical biology programs. We are particularly interested in the following areas:
           </p>
         </div>
+        <!-- Image directly below the intro text -->
+        <div class="card">
+          <img src="assets/images/Research-Summary_2018.webp?v=4" alt="Research Summary" style="width: 100%; height: auto; display: block;" />
+        </div>
         <div class="card">
           <h2>Target-based discovery of chemotherapeutics against Mycobacterium tuberculosis and other antibiotic-resistant bacterial infections.</h2>
           <p>

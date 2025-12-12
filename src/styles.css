@@ -322,3 +322,10 @@ input:focus, textarea:focus, select:focus { border-color: var(--primary); box-sh
 /* Wider layout for Research and other centered pages */
 .centered-page .container { max-width: 1400px; }
 .centered-page .card { width: 100%; }
+.centered-page .card img { 
+  width: 100%; 
+  height: auto; 
+  display: block; 
+  margin: 0;
+  border-radius: 8px;
+}
