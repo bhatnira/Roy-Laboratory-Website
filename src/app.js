@@ -1,51 +1,60 @@
-// Simple client-side router
-const routes = {
-  home: renderHome,
-  research: renderResearch,
-  people: renderPeople,
-  publications: renderPublications,
-  news: renderNews,
-  contact: renderContact,
-  impact: renderImpact,
-};
+/**
+ * Roy Laboratory Website - Main JavaScript File
+ * 
+ * This file contains all the website logic:
+ * - Page rendering functions (renderHome, renderNews, etc.)
+ * - Data storage (news, publications, team members)
+ * - Navigation/routing between pages
+ * 
+ * To update content, search for the section you need:
+ * - News: Search for "function newsItems()"
+ * - Publications: Search for "<div class="pub-item">"
+ * - Team: Search for "function teamData()"
+ */
 
-function navigate() {
-  const hash = (location.hash || '#home').replace('#', '');
-  const view = routes[hash] || renderHome;
-  view();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+// ============================================
+// SETUP & INITIALIZATION
+// ============================================
 
-window.addEventListener('hashchange', navigate);
+// When page loads, set up everything
 window.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('year').textContent = new Date().getFullYear();
-  setupMenu();
-  setupMegaMenu(); // now a no-op
-  // Initialize routing on load
-  router();
-  // Listen for hash changes
-  window.addEventListener('hashchange', router);
+  document.getElementById('year').textContent = new Date().getFullYear(); // Update copyright year
+  setupMenu();      // Setup mobile hamburger menu
+  setupMegaMenu();  // Setup mega menu (currently disabled)
+  router();         // Start routing system
+  window.addEventListener('hashchange', router); // Listen for page changes
 });
 
+// ============================================
+// HELPER FUNCTIONS
+// ============================================
+
+// Setup mobile hamburger menu button
 function setupMenu() {
   const btn = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav');
   btn?.addEventListener('click', () => {
     const open = nav.style.display === 'flex';
-    nav.style.display = open ? 'none' : 'flex';
+    nav.style.display = open ? 'none' : 'flex'; // Toggle menu open/closed
   });
 }
 
+// Mega menu setup (currently disabled)
 function setupMegaMenu() {
-  // Disable mega menu collapsible behavior
-  return;
+  return; // Not using mega menu right now
 }
 
+// Render HTML into the main page area
 function mount(html) {
   const app = document.getElementById('app');
   app.innerHTML = html;
 }
 
+// ============================================
+// PAGE RENDERING FUNCTIONS
+// ============================================
+
+// HOME PAGE
 function renderHome() {
   mount(`
   <section class="section" id="slideshow">
@@ -959,6 +968,19 @@ function renderJoinUs() {
   `);
 }
 
+// ============================================
+// NEWS DATA
+// ============================================
+// TO ADD NEWS: Copy one of the items below and add it at the top of this list
+// Format:
+// {
+//   title: 'Your Title',              // News headline
+//   date: 'Month Day, Year',          // When it was published
+//   summary: 'Brief description...',  // 1-2 sentences
+//   link: 'https://...',              // Link to full article
+//   image: 'assets/images/file.jpg'   // Photo (OR use 'video' for video embed)
+// },
+
 function newsItems() {
   return [
     { 
@@ -966,21 +988,21 @@ function newsItems() {
       date: 'January 15, 2025', 
       summary: 'Dr. Roy and her team bring innovative medicinal chemistry research to UTHSC, including two major NIH grants totaling $4.9 million to combat tuberculosis and advance drug discovery.',
       link: 'https://news.uthsc.edu/molecular-architects-of-roy-laboratory-join-ut-health-science-center-college-of-pharmacy/',
-      image: 'assets/images/roy-lab-news.jpg'
+      image: 'assets/images/roy-lab-news.jpg'  // Regular image
     },
     { 
       title: '"We Are Essentially Molecular Architects"', 
       date: 'UTHSC Pharmacy Feature', 
       summary: 'Dr. Sudeshna Roy discusses joining the UT Health Science Center College of Pharmacy and her lab\'s innovative approach to drug discovery and molecular design.',
       link: 'https://www.facebook.com/UTHSCPharmacy/videos/921681606607598/',
-      video: 'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FUTHSCPharmacy%2Fvideos%2F921681606607598%2F&show_text=false&width=560&t=0'
+      video: 'https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FUTHSCPharmacy%2Fvideos%2F921681606607598%2F&show_text=false&width=560&t=0'  // Facebook video embed
     },
     { 
       title: 'Dr. Roy Featured on WMC-TV "Bluff City Life"', 
       date: 'November 2024', 
       summary: 'Dr. Roy discusses her research lab\'s pioneering work as a "molecular architect", breaking new ground to improve outcomes for diseases like tuberculosis.',
       link: 'https://www.instagram.com/reel/DIMfPACPekK/',
-      video: 'https://www.instagram.com/reel/DIMfPACPekK/embed'
+      video: 'https://www.instagram.com/reel/DIMfPACPekK/embed'  // Instagram video embed
     },
     { 
       title: 'Innovator Spotlight: Sudeshna Roy', 
@@ -992,35 +1014,43 @@ function newsItems() {
   ];
 }
 
+// ============================================
+// ROUTER - Navigation System
+// ============================================
+// This function decides which page to show based on the URL
+// Example: website.com/#news will show the news page
+
 function router() {
-  const root = document.getElementById('app'); // render into <main id="app">
-  const hash = (location.hash || '#home').replace('#', '');
+  const root = document.getElementById('app'); // Main content area
+  const hash = (location.hash || '#home').replace('#', ''); // Get page name from URL
+  
+  // Match URL to the right page
   switch (hash) {
-    case 'home':
+    case 'home':                // website.com/#home
       renderHome();
       break;
-    case 'research':
+    case 'research':            // website.com/#research
       renderResearch(root);
       break;
-    case 'members':
+    case 'members':             // website.com/#members
       renderMembers(root);
       break;
-    case 'people':
+    case 'people':              // website.com/#people
       renderPeople();
       break;
-    case 'publications':
+    case 'publications':        // website.com/#publications
       renderPublications();
       break;
-    case 'sudeshna-roy':
+    case 'sudeshna-roy':        // website.com/#sudeshna-roy
       renderSudeshnaRoy();
       break;
-    case 'news':
+    case 'news':                // website.com/#news
       renderNews();
       break;
-    case 'join-us':
+    case 'join-us':             // website.com/#join-us
       renderJoinUs();
       break;
-    case 'contact':
+    case 'contact':             // website.com/#contact
       renderContact();
       break;
     case 'impact':

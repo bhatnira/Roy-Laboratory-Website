@@ -1,0 +1,71 @@
+/**
+ * Component Styles - Buttons, Links, Cards
+ */
+
+/* Links */
+a { 
+  color: var(--primary); 
+  text-decoration: none;
+}
+
+a:hover { 
+  text-decoration: underline;
+}
+
+/* Buttons */
+.button {
+  background: var(--primary); 
+  color: #071018; 
+  border: none; 
+  border-radius: 12px; 
+  text-decoration: none; 
+  font-weight: 600;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 200ms ease, filter 200ms ease, box-shadow 200ms ease;
+  padding: 12px 18px;
+}
+
+.button:hover { 
+  filter: brightness(1.08); 
+  transform: translateY(-1px);
+}
+
+.button:active { 
+  transform: translateY(0);
+}
+
+.button.secondary { 
+  background: transparent; 
+  color: var(--text); 
+  border: 1px solid var(--border); 
+  border-radius: 12px;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  gap: 24px;
+}
+
+/* Sections */
+.section {
+  padding: 80px 0;
+}
+
+.sub {
+  color: var(--muted);
+  font-size: 18px;
+  margin-top: 8px;
+}

@@ -1,0 +1,24 @@
+/**
+ * Impact Page Styles
+ */
+
+.impact-page {
+  padding: 40px 0;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.impact-copy {
+  padding: 24px;
+}
+
+@media (max-width: 768px) {
+  .impact-grid {
+    grid-template-columns: 1fr;
+  }
+}

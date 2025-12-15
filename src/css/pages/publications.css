@@ -1,0 +1,33 @@
+/**
+ * Publications Page Styles
+ */
+
+.pub-item {
+  text-align: left;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.pub-item:last-child {
+  border-bottom: none;
+}
+
+.pub-item h3 {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+}
+
+.pub-item .meta {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.pub-item .links {
+  margin-top: 8px;
+}
+
+.pub-item .links a {
+  margin-right: 12px;
+  font-size: 14px;
+}

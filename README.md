@@ -1,75 +1,173 @@
-# Roy Laboratory Website
+# Roy Laboratory Website 🧪
 
-Official website for the Roy Laboratory at the University of Tennessee Health Science Center (UTHSC) College of Pharmacy, led by Dr. Sudeshna Roy, Ph.D.
+Welcome! This is the official website for the **Roy Laboratory** at the University of Tennessee Health Science Center (UTHSC) College of Pharmacy.
 
-## About
+**Led by**: Dr. Sudeshna Roy, Ph.D.  
+**Research Focus**: Developing new medicines to fight drug-resistant infections  
+**Funding**: $4.9 million in NIH grants for tuberculosis research
 
-The Roy Laboratory focuses on innovative medicinal chemistry research, including drug discovery and chemical biology, with particular emphasis on combating drug-resistant infections and advancing precision therapeutics. The lab is supported by major NIH grants totaling $4.9 million for tuberculosis research.
+---
 
-## Features
+## � Documentation Guide
 
-- **Home**: Lab overview and research highlights
-- **Research**: Detailed information about research programs and projects
-- **Members**: Current team members, graduate students, undergraduates, and alumni
-- **Publications**: Complete list of lab publications (28 peer-reviewed papers)
-- **Sudeshna Roy**: PI profile with CV and contact information
-- **News**: Latest lab announcements and media coverage
-- **Join Us**: Opportunities for postdocs, graduate students, and undergraduates
+**Choose your guide based on your experience level:**
 
-## Technology Stack
+- 🟢 **New to websites?** → Read **[SIMPLE_GUIDE.md](SIMPLE_GUIDE.md)** (Step-by-step with screenshots)
+- 🟡 **Need a quick reminder?** → Check **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** (One-page cheat sheet)
+- 🔵 **Developer?** → See **[DOCUMENTATION.md](DOCUMENTATION.md)** (Technical details)
+- 🟣 **Refactoring code?** → Read **[REFACTORING_GUIDE.md](REFACTORING_GUIDE.md)** (Modular architecture)
 
-- **Frontend**: Vanilla JavaScript (ES6+)
-- **Styling**: Custom CSS with CSS variables
-- **Routing**: Hash-based client-side routing
-- **Slideshow**: Swiper.js v9
-- **Hosting**: Static site (deployable to GitHub Pages, Netlify, etc.)
+---
 
-## Project Structure
+## �📋 What's on the Website?
+
+Our website includes:
+
+- **🏠 Home** - Overview of our lab and what we do
+- **🔬 Research** - Information about our current projects
+- **👥 Members** - Meet our team: professors, students, and researchers
+- **📚 Publications** - Our published research papers (28 and counting!)
+- **👤 Sudeshna Roy** - About Dr. Roy, her CV, and contact information
+- **📰 News** - Latest announcements and media features
+- **🤝 Join Us** - Opportunities to work with us
+
+---
+
+## 🎯 For Website Administrators
+
+### Quick Start: View the Website Locally
+
+**Option 1: Using VS Code (Easiest)**
+1. Open this folder in Visual Studio Code
+2. Install the "Live Server" extension (if you haven't already)
+3. Right-click on `public/index.html`
+4. Select "Open with Live Server"
+5. Your browser will open automatically!
+
+**Option 2: Using Python (If you have Python installed)**
+```bash
+cd public
+python3 -m http.server 8000
+```
+Then open your browser and go to: http://localhost:8000
+
+**Option 3: Using Node.js**
+```bash
+npx http-server public -p 8000
+```
+Then visit: http://localhost:8000
+
+---
+
+## ✏️ How to Update Content (Non-Technical Guide)
+
+### 📰 Adding News Articles
+
+1. Open the file: `src/app.js`
+2. Find the section that says `function newsItems()`
+3. Add your new article at the top of the list:
+
+```javascript
+{
+  title: 'Your News Title Here',
+  date: 'Month Day, Year',
+  summary: 'A brief description of the news...',
+  link: 'https://link-to-full-article.com',
+  image: 'assets/images/your-photo.jpg'  // Optional
+}
+```
+
+4. Save the file
+5. Refresh your browser to see the changes!
+
+### 📚 Adding Publications
+
+1. Open the file: `src/app.js`
+2. Find where publications are listed (look for the numbered papers)
+3. Add your new publication at the top:
+
+```html
+<div class="pub-item">
+  <div>
+    <h3><strong>1.</strong> Your Paper Title</h3>
+    <p class="meta">Authors - Journal Name (Year)</p>
+  </div>
+  <div class="links">
+    <a href="https://doi.org/..." target="_blank">DOI</a>
+  </div>
+</div>
+```
+
+4. Update the numbers of existing publications
+5. Save and refresh!
+
+### 👥 Adding Team Members
+
+1. Open: `src/app.js`
+2. Find `function teamData()`
+3. Add to the appropriate section (postdocs, grads, undergrads):
+
+```javascript
+{
+  name: 'Member Name',
+  role: 'Their Position',
+  photo: '/assets/images/member-photo.jpg'
+}
+```
+
+4. Save the file and refresh!
+
+### 🖼️ Adding Photos
+
+1. Put your photo in: `public/assets/images/`
+2. Use the filename in your code (see examples above)
+3. **Tip**: Keep photo files under 500KB for fast loading!
+
+---
+
+## 🚀 For Developers
+
+### What Technology We Use
+
+- **Language**: JavaScript (no frameworks needed!)
+- **Styling**: CSS (custom styles, no Bootstrap)
+- **Photos**: Swiper.js for the slideshow
+- **Hosting**: Can be hosted anywhere (GitHub Pages, Netlify, etc.)
+- **No Installation Required**: Just open the HTML file!
+
+### 📁 Where Everything Lives
+
+Here's what each folder contains:
 
 ```
-DrRoyWebsiteClone/
-├── public/
-│   ├── index.html              # Main HTML file
-│   ├── assets/
-│   │   ├── images/             # Image assets (lab photos, member photos)
-│   │   └── Roy-CV-updated-Oct2025/
-│   │       └── Sudeshna Roy CV_Oct 2025.pdf
-├── src/
-│   ├── app.js                  # Main JavaScript (routing, render functions)
-│   └── styles.css              # Global styles
-├── Heat-Shots/                 # Source images (not used in production)
-├── Pictures/                   # Source images (not used in production)
-├── .gitignore                  # Git ignore file
-└── README.md                   # This file
+📦 Roy-Laboratory-Website/
+├── 📂 public/                  ← The actual website
+│   ├── 📄 index.html          ← Main page structure
+│   └── 📂 assets/
+│       ├── 🖼️ images/         ← All photos go here
+│       └── 📄 CV PDF          ← Dr. Roy's CV
+│
+├── 📂 src/                     ← Code that makes it work
+│   ├── 📄 app.js              ← Main logic (news, publications, etc.)
+│   └── 📄 styles.css          ← How it looks (colors, fonts, layout)
+│
+├── 📂 Heat-Shots/              ← Backup photos (not shown on site)
+├── 📂 Pictures/                ← More backup photos
+│
+└── 📄 README.md               ← You are here! 👋
 ```
 
-## Setup & Installation
+### 🔧 Technical Setup
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/bhatnira/Roy-Laboratory-Website.git
-   cd Roy-Laboratory-Website
-   ```
+**If you need to download the website code:**
 
-2. **Run locally**:
-   - Option 1: Use VS Code Live Server extension
-     - Open the project in VS Code
-     - Install the "Live Server" extension
-     - Right-click on `public/index.html` and select "Open with Live Server"
-   
-   - Option 2: Use Python's built-in server
-     ```bash
-     cd public
-     python3 -m http.server 8000
-     ```
-     Then visit: http://localhost:8000
-   
-   - Option 3: Use Node.js http-server
-     ```bash
-     npx http-server public -p 8000
-     ```
+```bash
+# Download from GitHub
+git clone https://github.com/bhatnira/Roy-Laboratory-Website.git
+cd Roy-Laboratory-Website
+```
 
-3. **No build process required** - This is a static site with no dependencies to install.
+**That's it!** No installation needed. Just open the files and edit.
 
 ## Development
 
@@ -144,7 +242,7 @@ Update the base URL in your deployment settings and ensure all asset paths are r
 Edit the `publicationsData()` function in `src/app.js`:
 ```javascript
 { 
-  authors: "Author names", 
+  authors: "Nirajan Bhattarai", 
   title: "Paper title", 
   journal: "Journal name", 
   year: 2025, 
@@ -202,8 +300,4 @@ Address: 881 Madison Avenue, Pharmacy Building_05_571, Memphis, TN 38163
 
 © 2025 Roy Laboratory, UTHSC. All rights reserved.
 
-## Acknowledgments
 
-- UTHSC College of Pharmacy
-- NIH funding support
-- All lab members and collaborators
